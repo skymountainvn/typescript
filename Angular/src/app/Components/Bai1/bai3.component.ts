@@ -5,12 +5,18 @@ import {Component} from "@angular/core";
     template:`
         <div class="container">
             <div class="form-group" style = "width:200px">
+                <button class="btn btn-success form-control" *ngIf="!isShowForm" (click)="toggleForm()"> SHOW </button>
+                <br>
+                <div *ngIf="isShowForm" >
                 <input class="form-control" placeholder="ENGLISH" [(ngModel)]="txten"> 
                 <br>
                 <input class="form-control" placeholder="VIETNAMESE" [(ngModel)]="txtvn"> 
                 <br>
                 <button class="btn btn-success form-control" (click)="addWord()"> ADD WORD </button>
-                
+                <br>
+                <br>
+                <button class="btn btn-danger form-control" (click)="toggleForm()"> CANCEL </button>
+                </div>
             </div>
             <div *ngFor= "let word of words">
                 <h3 class="{{ word.isRemember ? 'text-success' : 'text-danger'}}"> {{word.en}} </h3>
@@ -29,6 +35,7 @@ import {Component} from "@angular/core";
 export class Bai3Component {
     txten=' ';
     txtvn=' ';
+    isShowForm = false;
     words: word[] = [
         {en:'ONE', vn:"MOT", isRemember: true, _id:'a1'},
         {en:'TWO', vn:"HAI", isRemember: false, _id:'a2'},
@@ -50,12 +57,15 @@ export class Bai3Component {
 
     addWord() {
         const { txten, txtvn} = this;
-
         this.words.push({
             en: txten, vn: txtvn, isRemember: false, _id:Math.random()+ ' '
         });
         this.txten = '';
         this.txtvn = '';
+    }
+
+    toggleForm(){
+        this.isShowForm = !this.isShowForm;
     }
 
 }
