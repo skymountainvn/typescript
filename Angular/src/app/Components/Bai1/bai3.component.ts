@@ -44,6 +44,15 @@ export class Bai3Component {
         {en:'FIVE', vn:"NAM", isRemember: true, _id:'a5'}
     ];
 
+    wordSize1= {
+        fontWeight: 500,
+        color: 'green'
+    }
+    wordSize2= {
+        fontWeight: 500,
+        color: 'red'
+    }
+
 
     removeWord(_id:string) {
         const index = this.words.findIndex(word => word._id === _id);
