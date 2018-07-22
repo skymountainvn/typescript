@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import { sharedStylesheetJitUrl } from "../../../../node_modules/@angular/compiler";
 // list and button change color
 @Component({
     selector:"bai3",
@@ -19,7 +20,7 @@ import {Component} from "@angular/core";
                 </div>
             </div>
             <div *ngFor= "let word of words">
-                <h3 class="{{ word.isRemember ? 'text-success' : 'text-danger'}}"> {{word.en}} </h3>
+                <h3 [class.forgot]=" !word.isRemember "> {{word.en}} </h3>
                 <p> {{word.vn}} </p>
             <button class="btn btn-danger" (click)="removeWord(word._id)"> REMOVE </button>
             <button class="{{word.isRemember ? 'btn btn-danger' : 'btn btn-success'}}" (click)="toggle(word._id)"> TOGGLE </button>
@@ -28,7 +29,8 @@ import {Component} from "@angular/core";
     `,
     styles:[
         "p {color:blue }"
-    ] 
+    ] ,
+    styleUrls: ['./bai3.component.css']
 
 })
 
@@ -49,7 +51,7 @@ export class Bai3Component {
         color: 'green'
     }
     wordSize2= {
-        fontWeight: 500,
+        fontWeight: 900,
         color: 'red'
     }
 
