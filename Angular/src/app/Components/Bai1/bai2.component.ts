@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component , Input} from "@angular/core";
 // list and button change color
 @Component({
     selector:"bai2",

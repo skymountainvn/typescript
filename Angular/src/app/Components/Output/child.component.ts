@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
     selector: 'app-child',     
     templateUrl:'./child.component.html'
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
 })
 
 export class ChildComponent {
+    @Output() onIncrease = new EventEmitter();
+    @Output() onDescrease = new EventEmitter();
+    @Output() onReset = new EventEmitter();
+
+    increase() { this.onIncrease.emit();}
+    descrease() { this.onDescrease.emit();}
+    reset() { this.onReset.emit();}
 
 }

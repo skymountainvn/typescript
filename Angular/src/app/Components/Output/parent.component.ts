@@ -10,4 +10,5 @@ export class ParentComponent {
     increase(){ this.count++;}
     descrease(){ this.count--;}
     reset() { this.count = 0;}
+   
 }

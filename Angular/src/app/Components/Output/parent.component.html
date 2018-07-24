@@ -1,16 +1,9 @@
 <div>
     <h1>Count = {{ count }} </h1>
-    <div>
-        <button class="btn btn-success" (click)="increase()">
-            Increase
-        </button>
-    
-        <button class="btn btn-warning" (click)="descrease()">
-            Decrease
-        </button>
-    
-        <button class="btn btn-danger" (click)="reset()">
-            Reset
-        </button>
-    </div>
+    <app-child 
+        (onIncrease)="increase()"
+        (onDescrease)="descrease()"
+        (onReset)="reset()">
+    </app-child>
+    <br>
 </div>

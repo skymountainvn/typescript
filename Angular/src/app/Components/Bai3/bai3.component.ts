@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import { sharedStylesheetJitUrl } from "../../../../node_modules/@angular/compiler";
+import {Component, Output, Input, EventEmitter} from "@angular/core";
+import { sharedStylesheetJitUrl } from "@angular/compiler";
 // list and button change color
 @Component({
     selector:"bai3",
@@ -27,10 +27,7 @@ import { sharedStylesheetJitUrl } from "../../../../node_modules/@angular/compil
             </div>
         </div>
     `,
-    styles:[
-        "p {color:blue }"
-    ] ,
-    styleUrls: ['./bai3.component.css']
+    styleUrls:["./bai3.component.css"] 
 
 })
 
