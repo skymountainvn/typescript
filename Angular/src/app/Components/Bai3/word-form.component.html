@@ -2,13 +2,13 @@
     <button class="btn btn-success form-control" *ngIf="!isShowForm" (click)="toggleForm()"> SHOW </button>
     <br>
     <div *ngIf="isShowForm" >
-    <!-- <input class="form-control" placeholder="ENGLISH" [(ngModel)]="txten">  -->
-    <input class="form-control" placeholder="ENGLISH" > 
+    <input class="form-control" placeholder="ENGLISH" [(ngModel)]="txten"> 
+    <!-- <input class="form-control" placeholder="ENGLISH" >  -->
     <br>
-    <!-- <input class="form-control" placeholder="VIETNAMESE" [(ngModel)]="txtvn">  -->
-    <input class="form-control" placeholder="VIETNAMESE" > 
+    <input class="form-control" placeholder="VIETNAMESE" [(ngModel)]="txtvn"> 
+    <!-- <input class="form-control" placeholder="VIETNAMESE" >  -->
     <br>
-    <button class="btn btn-success form-control" > ADD WORD </button>
+    <button class="btn btn-success form-control" (click)="addWord()"> ADD WORD </button>
     <br>
     <br>
     <button class="btn btn-danger form-control" (click)="toggleForm()"> CANCEL </button>

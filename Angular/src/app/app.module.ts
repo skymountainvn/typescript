@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 // import { ParentComponent } from './Components/Output/parent.component';
 // import { ChildComponent } from './Components/Output/child.component';
 import { wordInfoComponent } from './Components/Bai3/word-info.component';
-import { wordFormComponent } from './Components/Bai3/word-form.component'
+import { wordFormComponent } from './Components/Bai3/word-form.component';
+import { wordFilterComponent } from './Components/Bai3/word-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     wordInfoComponent,
-    wordFormComponent
+    wordFormComponent,
+    wordFilterComponent
   ],
   imports: [
     BrowserModule,

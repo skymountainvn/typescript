@@ -1,8 +1,8 @@
 <div> 
-   <h3 [class]="wordInfo.isMemorized ? 'text-success' : 'text-danger' "> 
+   <h3 [class]="wordInfo.isRemember ? 'text-success' : 'text-danger' "> 
        {{ wordInfo.en}}
     </h3>
     <p> {{ wordInfo.vn}} </p>
-    <button class="btn btn-danger" > REMOVE </button>
-    <button class="btn btn-success" > TOGGLE </button>
+    <button class="btn btn-danger" (click)="removeWord()"> REMOVE </button>
+    <button class="btn btn-success" (click)="toggle()" > TOGGLE </button>
 </div>
